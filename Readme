@@ -1,0 +1,29 @@
+git clone https://github.com/PrasadTelasula/chroot.git
+
+cp chroot/ubuntujail.tgz .
+
+tar -xf ubuntujail.tgz
+
+sudo chroot ./ubuntujail/ /bin/bash
+
+# Now user will be jailed to ubuntujail
+
+# Execute the below commands in ubuntujail
+
+chmod 777 /tmp
+
+apt-get update -y
+
+apt-get install git -y
+
+hostname
+
+hostname -I
+
+ps
+
+df -hT
+
+cat /etc/os-release
+
+uname -a
